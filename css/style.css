@@ -41,10 +41,9 @@ main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
 section { margin-bottom: 3rem; }
 h2 { color: #2c3e50; margin-bottom: 1.5rem; font-size: 2rem; text-align: center; position: relative; }
 
-/* Hero Section - Fixed Animation */
 .hero {
-    position: relative; /* Add this */
-    background: linear-gradient(135deg, #03d8ae, #0984e3, #7351d7);
+    position: relative;
+    background: linear-gradient(200deg, #03d8ae, #0984e3, #7351d7);
     background-size: 200% 200%;
     color: white;
     padding: 4rem 2rem;
