@@ -85,7 +85,7 @@ if ('serviceWorker' in navigator) {
       });
     });
   });
-document.getElementById('emailForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
   const name = encodeURIComponent(document.getElementById('name').value);
