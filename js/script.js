@@ -85,33 +85,3 @@ if ('serviceWorker' in navigator) {
       });
     });
   });
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  console.log("Form submitted!"); 
-
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-
-  console.log("Values:", {name, email, message});
-
-  const subject = `CaringBytes Inquiry from ${name}`;
-  const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-  
-  const mailtoLink = `mailto:your-email@school.edu?subject=${
-    encodeURIComponent(subject)
-  }&body=${
-    encodeURIComponent(body)
-  }`;
-
-  console.log("Mailto link:", mailtoLink); 
-
-  window.location.href = mailtoLink;
-  
-  setTimeout(() => {
-    if (!document.hidden) {
-      alert("If email didn't open, please contact us at your-email@school.edu");
-    }
-  }, 1000);
-});
