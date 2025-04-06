@@ -85,3 +85,23 @@ if ('serviceWorker' in navigator) {
       });
     });
   });
+document.getElementById('emailForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const name = encodeURIComponent(document.getElementById('name').value);
+  const email = encodeURIComponent(document.getElementById('email').value);
+  const message = encodeURIComponent(document.getElementById('message').value);
+  
+  const subject = `CaringBytes Inquiry from ${name}`;
+  const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n`;
+  
+  const mailtoLink = `mailto:Paul.Yeung3@det.nsw.edu.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+  window.location.href = mailtoLink;
+
+  setTimeout(() => {
+    if (!document.hidden) {
+      alert("If Gmail didn't open, please email us directly at Paul.Yeung3@det.nsw.edu.au");
+    }
+  }, 1000);
+});
